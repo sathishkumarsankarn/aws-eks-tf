@@ -10,7 +10,7 @@ resource "aws_eks_node_group" "eks_ng_public" {
   disk_size = 10
 
   remote_access {
-    ec2_ssh_key = data.aws_key_pair.terraform_key.name
+    ec2_ssh_key = var.aws_key_pair
   }
 
   scaling_config {

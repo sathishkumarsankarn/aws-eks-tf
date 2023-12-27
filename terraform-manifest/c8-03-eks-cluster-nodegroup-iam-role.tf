@@ -13,6 +13,7 @@ resource "aws_iam_role" "cluster_ng_role" {
     }]
     Version = "2012-10-17"
   })
+   tags = local.common_tags
 }
 
 resource "aws_iam_role_policy_attachment" "eks-demo-AmazonEKSWorkerNodePolicy" {

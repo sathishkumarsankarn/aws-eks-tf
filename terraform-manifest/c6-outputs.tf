@@ -53,3 +53,18 @@ output "inst_eip_pub_ip_output" {
 output "eks_cluster_name_output" {
   value = aws_eks_cluster.eks-cluster.name
 }
+
+output "eks_cluster_tag_output" {
+  value = aws_eks_cluster.eks-cluster.tags_all
+}
+output "eks_cluster_ng_id_public_output" {
+  value = aws_eks_node_group.eks_ng_public.id
+}
+
+output "eks_cluster_ng_id_private_output" {
+  value = aws_eks_node_group.eks_ng_private.tags_all
+}
+
+output "eks_ng_cluster_name_output" {
+  value = aws_eks_node_group.eks_ng_public.cluster_name
+}
