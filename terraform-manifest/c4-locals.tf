@@ -4,5 +4,5 @@ locals {
     env = var.environment
     name = local.name
   }
-  eks_cluster_name = "eks-demo"
+  eks_cluster_name = "${var.app_category}-${var.environment}-eks-demo"
 }
