@@ -51,7 +51,15 @@ output "inst_eip_pub_ip_output" {
 }
 
 output "eks_cluster_name_output" {
-  value = aws_eks_cluster.eks-cluster.name
+  value = aws_eks_cluster.eks-cluster.id
+}
+
+output "eks_cluster_cert_auth_output" {
+  value = aws_eks_cluster.eks-cluster.certificate_authority
+}
+
+output "eks_cluster_endpoint_output" {
+  value = aws_eks_cluster.eks-cluster.endpoint
 }
 
 output "eks_cluster_tag_output" {
