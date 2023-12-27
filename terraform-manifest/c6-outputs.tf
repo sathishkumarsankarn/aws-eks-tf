@@ -49,3 +49,7 @@ output "inst_eip_pub_dns_output" {
 output "inst_eip_pub_ip_output" {
   value = aws_eip.inst_eip.public_ip
 }
+
+output "eks_cluster_name_output" {
+  value = aws_eks_cluster.eks-cluster.name
+}
