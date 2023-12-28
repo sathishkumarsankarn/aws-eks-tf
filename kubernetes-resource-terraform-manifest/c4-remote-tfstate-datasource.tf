@@ -1,3 +1,15 @@
+# Local tfstate file concept --->
+
+/*
+data "terraform_remote_state" "eks" {
+  backend = "local"
+  config = {
+    path = "../aws-eks-vpc-terraform-manifest/terraform.tfstate"
+  }
+}
+*/
+
+# Remote tfstate file from s3 as backend concept ---->
 data "terraform_remote_state" "eks" {
   backend = "s3"
 
