@@ -10,4 +10,11 @@ terraform {
             version = "5.31.0"
         }
     }
+    backend "s3" {
+      bucket = "terraform-aws-eks-demoo"
+      key = "dev/k8s-resource/terraform.tfstate"
+      region = "us-east-1"
+
+      dynamodb_table = "dev-k8sresource"
+    }
 }

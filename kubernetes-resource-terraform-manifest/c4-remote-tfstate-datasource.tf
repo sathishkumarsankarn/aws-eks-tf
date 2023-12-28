@@ -1,8 +1,10 @@
 data "terraform_remote_state" "eks" {
-  backend = "local"
+  backend = "s3"
 
   config = {
-    path = "../aws-eks-vpc-terraform-manifest/terraform.tfstate"
+    bucket = "terraform-aws-eks-demoo"
+    key = "dev/k8s-resource/terraform.tfstate"
+    region = "us-east-1"
   }
 }
 

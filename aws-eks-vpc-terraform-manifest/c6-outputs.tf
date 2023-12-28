@@ -55,7 +55,7 @@ output "eks_cluster_name_output" {
 }
 
 output "eks_cluster_cert_auth_output" {
-  value = aws_eks_cluster.eks-cluster.certificate_authority
+  value = aws_eks_cluster.eks-cluster.certificate_authority[0].data
 }
 
 output "eks_cluster_endpoint_output" {

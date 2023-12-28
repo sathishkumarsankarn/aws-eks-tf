@@ -5,7 +5,7 @@ provider "aws" {
 
 provider "kubernetes" {
   # Configuration options
-  host = data.aws_eks_cluster.cluster_name.endpoint
-  cluster_ca_certificate = base64decode(data.aws_eks_cluster.cluster_name.certificate_authority[0].data)
+  host = data.terraform_remote_state.eks.outputs.eks_cluster_endpoint_output
+  cluster_ca_certificate = base64decode(data.terraform_remote_state.eks.outputs.eks_cluster_cert_auth_output)
   token = data.aws_eks_cluster_auth.cluster_auth.token
 }
