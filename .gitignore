@@ -1,1 +1,2 @@
-terraform-manifest/.terraform*
+aws-eks-vpc-terraform-manifest/.terraform*
+kubernetes-resource-terraform-manifest/.terraform*
